@@ -1,5 +1,6 @@
-import { GetQuotesRequest, QuoteResponse, GetSummaryRequest, SummaryResponse } from './models';
 import { YahooFinanceService, YahooFinanceApiCall } from './util';
+import { GetQuotesRequest, GetSummaryRequest } from './request';
+import { QuoteResponse, SummaryResponse } from './response';
 
 export class MarketService extends YahooFinanceService  {
     @YahooFinanceApiCall<GetQuotesRequest, QuoteResponse>('/market/get-quotes')
