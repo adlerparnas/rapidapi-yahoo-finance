@@ -4,7 +4,7 @@ import * as querystring from 'query-string';
 export function getApi<R>(hostname: string, path: string, params: any, apiKey: string, headers: any): Promise<R> {
 
   return new Promise((res, rej) => {
-    var options = {
+    const options = {
       "method": "GET",
       "hostname": hostname,
       "port": null,
@@ -17,17 +17,15 @@ export function getApi<R>(hostname: string, path: string, params: any, apiKey: s
       }
     };
 
-    console.log(options);
-
     const req = http.request(options, function (response) {
-      var chunks = [];
+      const chunks = [];
 
       response.on("data", function (chunk) {
         chunks.push(chunk);
       });
 
       response.on("end", function () {
-        var body = Buffer.concat(chunks);
+        const body = Buffer.concat(chunks);
 
         try {
           res(JSON.parse(body.toString()) as R);
