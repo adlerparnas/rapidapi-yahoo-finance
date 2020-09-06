@@ -1,13 +1,13 @@
 {
   "name": "rapidapi-yahoo-finance",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Library to use RapidAPI Yahoo Finance",
   "main": "index.js",
   "scripts": {
     "test": "exit 0;",
     "prebuild": "rm -rf dist",
     "build": "tsc",
-    "postbuild": "cp package* dist",
+    "postbuild": "cp package* dist && cp README.md dist",
     "build:watch": "tsc -w"
   },
   "repository": {
