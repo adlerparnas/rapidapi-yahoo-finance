@@ -21,4 +21,8 @@ export interface Summary {
   region: string;
   shortName: string;
   regularMarketPreviousClose: FormatedData;
+  firstTradeDateMilliseconds:number;
+  quoteSourceName: string;
+  priceHint: number;
+  triggerable: boolean;
 }
