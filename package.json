@@ -1,6 +1,6 @@
 {
   "name": "rapidapi-yahoo-finance",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Library to use RapidAPI Yahoo Finance",
   "main": "index.js",
   "scripts": {
